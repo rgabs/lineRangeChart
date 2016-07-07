@@ -1,0 +1,430 @@
+.f12 {
+  font-size: 12px;
+}
+.f15 {
+  font-size: 15px;
+}
+.f30 {
+  font-size: 30px;
+  letter-spacing: -2px;
+}
+.f40 {
+  font-size: 40px;
+  letter-spacing: -2px;
+}
+.f16 {
+  font-size: 16px;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.font-black {
+  color: #000000;
+}
+.clearfix:after, .clearfix:before {
+  content: '';
+  clear: both;
+  display: table;
+}
+input[type=checkbox] {
+  display: none;
+}
+input[type=checkbox] + label:before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  vertical-align: middle;
+  margin-right: 15px;
+  border-radius: 4px;
+  background-color: white;
+}
+input[type=checkbox]:checked + label:before {
+  content: "";
+  background: url('../images/tick.svg') no-repeat center;
+  background-size: 75%;
+}
+input[type=radio] {
+  display: none;
+}
+input[type=radio] + label:before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  vertical-align: middle;
+  margin-right: 10px;
+  border-radius: 4px;
+  border: 2px solid #4D4D4D;
+  background-color: white;
+}
+input[type=radio]:checked + label:before {
+  content: "";
+  background: url('../images/radio_rec_inside.svg') no-repeat center;
+}
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+.blue-checkbox input[type=checkbox] + label:before {
+  border: 2px solid #0071BC;
+}
+.green-checkbox input[type=checkbox] + label:before {
+  border: 2px solid #8CC63F;
+}
+.green-checkbox input[type=checkbox]:checked + label:before {
+  background-color: #8CC63F;
+}
+.yellow-checkbox input[type=checkbox] + label:before {
+  border: 2px solid #FBAE17;
+}
+.red-checkbox input[type=checkbox] + label:before {
+  border: 2px solid #C84707;
+}
+.black-checkbox input[type=checkbox] + label:before {
+  border: 2px solid #4D4D4D;
+}
+.font-blue {
+  color: RGBA(0, 113, 188, 1);
+}
+.font-green {
+  color: RGBA(140, 198, 63, 1);
+}
+.font-yellow {
+  color: RGBA(251, 174, 23, 1);
+}
+.font-red {
+  color: RGBA(200, 71, 7, 1);
+}
+.font-grey {
+  color: RGBA(153, 153, 153, 1);
+}
+#driverView {
+  padding: 5px 20px;
+}
+.checkbox-container, .checkbox-form {
+  overflow: auto;
+}
+.checkbox-container ul, .checkbox-form ul {
+  list-style: none;
+  float: right;
+  padding-bottom: 15px;
+  font-size: 12px;
+}
+.checkbox-container ul li, .checkbox-form ul li {
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: top;
+}
+#driver-chart-container .checkbox-form {
+  overflow: auto;
+}
+#driver-chart-container .checkbox-form ul {
+  list-style: none;
+  float: right;
+  padding-bottom: 15px;
+  font-size: 12px;
+}
+#driver-chart-container .checkbox-form ul li {
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: top;
+}
+#driver-chart-container .driver-analysis-heading {
+  font-weight: bold;
+  overflow: auto;
+}
+#driver-chart-container .driver-analysis-heading .driver-heading {
+  width: 40%;
+  padding: 10px;
+  font-size: 16px;
+}
+#driver-chart-container .driver-analysis-heading .survey-heading {
+  width: 25%;
+  text-align: center;
+  padding: 10px;
+  font-size: 16px;
+}
+#driver-chart-container .space-fill-40 {
+  width: 40%;
+  padding: 2px 10px;
+}
+#driver-chart-container .chart-triangle {
+  width: 25%;
+}
+#driver-chart-container .chart-triangle .triangle-box {
+  width: 25%;
+}
+#driver-chart-container .chart-triangle .triangle-box .triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 7.8px 4.5px 0 4.5px;
+  border-color: #e6e6e6 transparent transparent transparent;
+}
+#driver-chart-container .chart-triangle .triangle-box .triangle-left {
+  margin-left: -4px;
+}
+#driver-chart-container .chart-triangle .triangle-box .triangle-right {
+  margin-right: -4px;
+}
+#driver-chart-container .chart-heading {
+  position: relative;
+  width: 25%;
+  color: #808080;
+  font-size: 10px;
+}
+#driver-chart-container .chart-heading .chart-heading-advanced {
+  position: absolute;
+  right: 0;
+}
+#driver-chart-container .driver-row {
+  clear: both;
+  margin-bottom: 5px;
+  background-color: #F2F2F2;
+}
+#driver-chart-container .driver-row .driver-wrapper {
+  height: 40px;
+  cursor: pointer;
+}
+#driver-chart-container .driver-row .driver-name {
+  width: 40%;
+  font-size: 16px;
+  padding: 10px;
+}
+#driver-chart-container .driver-row .range-chart {
+  width: 25%;
+  height: 100%;
+  position: relative;
+}
+#driver-chart-container .driver-row .range-chart .scales {
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+  height: 100%;
+}
+#driver-chart-container .driver-row .range-chart .scales .scale {
+  width: 25%;
+  height: 100%;
+}
+#driver-chart-container .driver-row .range-chart .scales .scale .scale-border {
+  position: relative;
+  border-left: 1px solid rgba(0, 0, 0, 0.06);
+  height: 100%;
+}
+#driver-chart-container .driver-row .range-chart .scale:last-of-type .scale-border:last-of-type {
+  border-right: 1px solid rgba(0, 0, 0, 0.06);
+}
+#driver-chart-container .driver-row .range-chart .range-bar {
+  width: 50%;
+  position: absolute;
+  height: 100%;
+  background-color: #BEDB9A;
+  border-radius: 5px;
+}
+#driver-chart-container .driver-row .range-chart .marker {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  left: 5px;
+  border: 2px solid grey;
+  margin: 11px 0;
+  border-radius: 50%;
+  z-index: 2;
+}
+#driver-chart-container .driver-row .range-chart .company-marker {
+  border-color: #0071BC;
+  left: 10px;
+}
+#driver-chart-container .driver-row .range-chart .industry-marker {
+  border-color: #C84808;
+  left: 20px;
+}
+#driver-chart-container .driver-row .range-chart .quartile-marker {
+  border-color: #FBAE17;
+  left: 30px;
+}
+#driver-chart-container .driver-row .range-chart .top10-marker {
+  border-color: #4D4D4D;
+  left: 40px;
+}
+#driver-chart-container .driver-row .arrow-bottom {
+  background: url("../images/black-arrow.svg") no-repeat;
+}
+#driver-chart-container .driver-row .invert {
+  -moz-transform: scaleY(-1);
+  -o-transform: scaleY(-1);
+  -webkit-transform: scaleY(-1);
+  transform: scaleY(-1);
+  filter: FlipV;
+  -ms-filter: "FlipV";
+}
+#driver-chart-container .driver-row .driver-right-text {
+  width: 29%;
+  height: 100%;
+  color: #B3B3B3;
+  display: none;
+  font-weight: 600;
+}
+#driver-chart-container .driver-row .driver-right-text .best-practices {
+  padding: 12px;
+  font-size: 12px;
+}
+#driver-chart-container .driver-row .arrow {
+  width: 2%;
+  height: 15px;
+  margin-top: 12px;
+  padding-right: 10px;
+  -webkit-transition: 0.6s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transition: 0.6s;
+  -moz-transform-style: preserve-3d;
+  -o-transition: 0.6s;
+  -o-transform-style: preserve-3d;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+}
+#driver-chart-container .driver-row .driver-desc {
+  display: none;
+}
+#driver-chart-container .driver-row .description-wrapper {
+  background-color: #FAFAFA;
+  height: 80px;
+}
+#driver-chart-container .driver-row .description-wrapper .line-container {
+  position: relative;
+  left: 6px;
+  top: 3px;
+}
+#driver-chart-container .driver-row .description-wrapper .line-container .line {
+  width: 0;
+  height: 0.1px;
+  -moz-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  z-index: 10;
+  position: absolute;
+  -moz-animation-delay: 0.2s;
+  -webkit-animation-delay: 0.2s;
+  -moz-animation-duration: 0.2s;
+  -moz-animation-timing-function: linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-name: line;
+  -webkit-animation-duration: 0.2s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-name: line;
+}
+#driver-chart-container .driver-row .description-wrapper .driver-name .driver-text {
+  font-size: 12px;
+  padding: 15px 30px;
+}
+#driver-chart-container .driver-row .description-wrapper .desc-right-container {
+  width: 32%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#driver-chart-container .driver-row .description-wrapper .desc-right-container .desc-text {
+  padding: 10px 20px;
+  font-size: 12px;
+}
+#driver-chart-container .driver-row .description-wrapper .range-chart .range-bar {
+  margin: auto;
+  top: 0;
+  height: 40%;
+  bottom: 0;
+}
+#driver-chart-container .driver-row .description-wrapper .range-chart .marker {
+  margin: 35px 0;
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+  border: none;
+  -moz-animation-delay: 0.9s;
+  -webkit-animation-delay: 0.9s;
+  -moz-transform: scale(0);
+  -moz-animation: point 0.1s linear forwards;
+  -webkit-transform: scale(0);
+  -webkit-animation: point 0.1s linear forwards;
+}
+#driver-chart-container .driver-row .description-wrapper .range-chart .company-desc-marker {
+  background-color: #0071BC;
+  left: 20px;
+}
+#driver-chart-container .driver-row .description-wrapper .range-chart .company-desc-marker .line {
+  border-bottom: 2px dotted #0071BC;
+}
+#driver-chart-container .driver-row .description-wrapper .range-chart .industry-desc-marker {
+  background-color: #C84808;
+  left: 50px;
+}
+#driver-chart-container .driver-row .description-wrapper .range-chart .industry-desc-marker .line {
+  border-bottom: 2px dotted #C84808;
+}
+#driver-chart-container .driver-row .description-wrapper .range-chart .quartile-desc-marker {
+  background-color: #FBAE17;
+  left: 70px;
+}
+#driver-chart-container .driver-row .description-wrapper .range-chart .quartile-desc-marker .line {
+  border-bottom: 2px dotted #FBAE17;
+}
+#driver-chart-container .driver-row .description-wrapper .range-chart .top10-desc-marker {
+  background-color: #4D4D4D;
+  left: 90px;
+}
+#driver-chart-container .driver-row .description-wrapper .range-chart .top10-desc-marker .line {
+  border-bottom: 2px dotted #4D4D4D;
+}
+@-moz-keyframes point {
+  0% {
+    -moz-transform: scale(0, 0);
+  }
+  100% {
+    -moz-transform: scale(1, 1);
+  }
+}
+@-webkit-keyframes point {
+  0% {
+    -webkit-transform: scale(0, 0);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+  }
+}
+@keyframes point {
+  0% {
+    transform: scale(0, 0);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+@-moz-keyframes line {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@-webkit-keyframes line {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes line {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}

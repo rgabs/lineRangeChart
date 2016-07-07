@@ -1,0 +1,106 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Awesome Line/Range Chart</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="Rahul Gaba">
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+
+
+  <link rel="stylesheet" href="lib/lineRangeChart.css">
+  <style>
+    body {
+      font-family: arial
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="driver-chart-container">
+
+    <div id='chartDemo'></div>
+
+  </div>
+
+  <script src="jQuery.min.js"></script>
+  <script src="lib/jQuery.actual.min.js"></script>
+  <script src="lib/lineRangeChart.js"></script>
+  <script>
+    $(function() {
+      var descData = [{
+        "driverName": "Change readiness",
+        "driverCode": "MA_3",
+        "company": 2.7,
+        "industry": 2.2,
+        "min": 1,
+        "max": 5,
+        "quartile": 3,
+        "top10": 5,
+        "rightText": "The level of compliance with purchasing processes and guidelines is generally very high, with strict management of consequences"
+      }, {
+        "driverName": "Strategy execution and follow up",
+        "driverCode": "MA_4",
+        "company": 3.2,
+        "industry": 3.2,
+        "min": 1,
+        "max": 5,
+        "quartile": 4,
+        "top10": 5,
+        "rightText": "Purchasing is seen and acts as a key contributor to company value along several dimensions"
+      }, {
+        "driverName": "Individual category manager capabilities",
+        "driverCode": "TM_1",
+        "company": 3,
+        "industry": 2.8,
+        "min": 1,
+        "max": 5,
+        "quartile": 4,
+        "top10": 5,
+        "rightText": "Performance aspirations and vision for the purchasing function are clearly stated and generally shared and pursued by all purchasing professionals"
+      }, {
+        "driverName": "Individual category manager capabilities",
+        "driverCode": "TM_2",
+        "company": 3,
+        "industry": 2.8,
+        "min": 1,
+        "max": 5,
+        "quartile": 4,
+        "top10": 5,
+        "rightText": "Performance aspirations and vision for the purchasing function are clearly stated and generally shared and pursued by all purchasing professionals"
+      }];
+      var driverData = [{
+        "driverName": "Talent Management",
+        "driverCode": "TM",
+        "company": 2.9,
+        "industry": 3,
+        "min": 2.3,
+        "max": 4.3,
+        "quartile": 3.7,
+        "top10": 4.3,
+        "industryDiff": -0.1,
+        "quartileDiff": -0.8,
+        "top10Diff": -1.4
+      }, {
+        "driverName": "Strategic alignment and posture",
+        "driverCode": "SAP",
+        "company": 3.1,
+        "industry": 2.9,
+        "min": 2.3,
+        "max": 4.7,
+        "quartile": 3.7,
+        "top10": 4.7,
+        "industryDiff": 0.2,
+        "quartileDiff": -0.6,
+        "top10Diff": -1.6
+      }];
+      $('#chartDemo').lineRangeChart(descData, driverData);
+    });
+  </script>
+</body>
+
+</html>
