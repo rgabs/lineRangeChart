@@ -1,0 +1,328 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Awesome Line/Range Chart</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="Rahul Gaba">
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+
+
+  <link rel="stylesheet" href="lib/lineRangeChart.css">
+  <style>
+    body {
+      font-family: arial
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="driver-chart-container">
+
+    <div id='chartDemo'></div>
+
+  </div>
+
+  <script src="jQuery.min.js"></script>
+  <script src="lib/jQuery.actual.min.js"></script>
+  <script src="lib/lineRangeChart.js"></script>
+  <script>
+    $(function() {
+      var descData = [{
+        "driverName": "Dummy Lever Name",
+        "driverCode": "MA_3",
+        "filter1": 2.7,
+        "filter2": 2.2,
+        "min": 1,
+        "max": 5,
+        "filter3": 3,
+        "filter4": 5,
+        "rightText": "Sit ad perfecto legendos. Pro alii quando aliquam ad. Cu his aliquip reprimique, ne has utroque maluisset."
+      }, {
+        "driverName": "Dummy Lever Name",
+        "driverCode": "MA_1",
+        "filter1": 2.7,
+        "filter2": 2.2,
+        "min": 1,
+        "max": 5,
+        "filter3": 3,
+        "filter4": 5,
+        "rightText": "Sit ad perfecto legendos. Pro alii quando aliquam ad. Cu his aliquip reprimique, ne has utroque maluisset."
+      }, {
+        "driverName": "Dummy Lever Name",
+        "driverCode": "MA_2",
+        "filter1": 2.7,
+        "filter2": 2.2,
+        "min": 1,
+        "max": 5,
+        "filter3": 3,
+        "filter4": 5,
+        "rightText": "Sit ad perfecto legendos. Pro alii quando aliquam ad. Cu his aliquip reprimique, ne has utroque maluisset."
+      }, {
+        "driverName": "Dummy Lever Name",
+        "driverCode": "MA_4",
+        "filter1": 2.7,
+        "filter2": 2.2,
+        "min": 1,
+        "max": 5,
+        "filter3": 3,
+        "filter4": 5,
+        "rightText": "Sit ad perfecto legendos. Pro alii quando aliquam ad. Cu his aliquip reprimique, ne has utroque maluisset."
+      }, {
+        "driverName": "Dummy Lever Name",
+        "driverCode": "MA_5",
+        "filter1": 2.7,
+        "filter2": 2.2,
+        "min": 1,
+        "max": 5,
+        "filter3": 3,
+        "filter4": 5,
+        "rightText": "Sit ad perfecto legendos. Pro alii quando aliquam ad. Cu his aliquip reprimique, ne has utroque maluisset."
+      }, {
+        "driverName": "Dummy Lever Name",
+        "driverCode": "A_4",
+        "filter1": 3.2,
+        "filter2": 3.2,
+        "min": 1,
+        "max": 5,
+        "filter3": 4,
+        "filter4": 5,
+        "rightText": "Sea dicunt voluptatibus ut, pri id case primis molestiae, iisque reprehendunt ex vel. Impetus deterruisset vel ad, eam eu exerci recusabo principes, prima dicit cu cum. Vim justo nostrud quaestio ad, qui nobis ignota voluptaria ex. Mel eu nonumy vivendum voluptatum."
+      }, {
+        "driverName": "Dummy Lever Name",
+        "driverCode": "TM_1",
+        "filter1": 3,
+        "filter2": 2.8,
+        "min": 1,
+        "max": 5,
+        "filter3": 4,
+        "filter4": 5,
+        "rightText": "Ex sed delicata sententiae, duo at inani ignota nostro. Cum et libris mnesarchum, an mundi insolens oportere sit, purto modus nostrud ex nec. Quo an vocent omnesque. Ea vis putant invidunt insolens, est prima numquam et."
+      }, {
+        "driverName": "Dummy Lever Name",
+        "driverCode": "TM_2",
+        "filter1": 3,
+        "filter2": 2.8,
+        "min": 1,
+        "max": 5,
+        "filter3": 4,
+        "filter4": 5,
+        "rightText": "Lorem ipsum dolor sit amet, vim atqui congue utroque ad, eam te diam adipisci, ne oporteat apeirian deseruisse quo. Utamur iuvaret repudiandae has et."
+      }, {
+        "driverName": "Dummy Lever Name",
+        "driverCode": "X_1",
+        "filter1": 3,
+        "filter2": 2.8,
+        "min": 1,
+        "max": 5,
+        "filter3": 4,
+        "filter4": 5,
+        "rightText": "Lorem ipsum dolor sit amet, vim atqui congue utroque ad, eam te diam adipisci, ne oporteat apeirian deseruisse quo. Utamur iuvaret repudiandae has et."
+      }, {
+        "driverName": "Dummy Lever Name",
+        "driverCode": "X_2",
+        "filter1": 3,
+        "filter2": 2.8,
+        "min": 1,
+        "max": 5,
+        "filter3": 4,
+        "filter4": 5,
+        "rightText": "Lorem ipsum dolor sit amet, vim atqui congue utroque ad, eam te diam adipisci, ne oporteat apeirian deseruisse quo. Utamur iuvaret repudiandae has et."
+      }, {
+        "driverName": "Dummy Lever Name",
+        "driverCode": "X_3",
+        "filter1": 3,
+        "filter2": 2.8,
+        "min": 1,
+        "max": 5,
+        "filter3": 4,
+        "filter4": 5,
+        "rightText": "Lorem ipsum dolor sit amet, vim atqui congue utroque ad, eam te diam adipisci, ne oporteat apeirian deseruisse quo. Utamur iuvaret repudiandae has et."
+      }, {
+        "driverName": "Dummy Lever Name",
+        "driverCode": "X_4",
+        "filter1": 3,
+        "filter2": 2.8,
+        "min": 1,
+        "max": 5,
+        "filter3": 4,
+        "filter4": 5,
+        "rightText": "Lorem ipsum dolor sit amet, vim atqui congue utroque ad, eam te diam adipisci, ne oporteat apeirian deseruisse quo. Utamur iuvaret repudiandae has et."
+      }, {
+        "driverName": "Dummy Lever Name",
+        "driverCode": "A_2",
+        "filter1": 3,
+        "filter2": 2.8,
+        "min": 1,
+        "max": 5,
+        "filter3": 4,
+        "filter4": 5,
+        "rightText": "Lorem ipsum dolor sit amet, vim atqui congue utroque ad, eam te diam adipisci, ne oporteat apeirian deseruisse quo. Utamur iuvaret repudiandae has et."
+      }, {
+        "driverName": "Dummy Lever Name",
+        "driverCode": "A_3",
+        "filter1": 3,
+        "filter2": 2.8,
+        "min": 1,
+        "max": 5,
+        "filter3": 4,
+        "filter4": 5,
+        "rightText": "Lorem ipsum dolor sit amet, vim atqui congue utroque ad, eam te diam adipisci, ne oporteat apeirian deseruisse quo. Utamur iuvaret repudiandae has et."
+      }, {
+        "driverName": "Dummy Lever Name",
+        "driverCode": "C_1",
+        "filter1": 3,
+        "filter2": 2.8,
+        "min": 1,
+        "max": 5,
+        "filter3": 4,
+        "filter4": 5,
+        "rightText": "Lorem ipsum dolor sit amet, vim atqui congue utroque ad, eam te diam adipisci, ne oporteat apeirian deseruisse quo. Utamur iuvaret repudiandae has et."
+      }, {
+        "driverName": "Dummy Lever Name",
+        "driverCode": "Z_2",
+        "filter1": 3,
+        "filter2": 2.8,
+        "min": 1,
+        "max": 5,
+        "filter3": 4,
+        "filter4": 5,
+        "rightText": "Lorem ipsum dolor sit amet, vim atqui congue utroque ad, eam te diam adipisci, ne oporteat apeirian deseruisse quo. Utamur iuvaret repudiandae has et."
+      }, {
+        "driverName": "Dummy Lever Name",
+        "driverCode": "Z_3",
+        "filter1": 3,
+        "filter2": 2.8,
+        "min": 1,
+        "max": 5,
+        "filter3": 4,
+        "filter4": 5,
+        "rightText": "Lorem ipsum dolor sit amet, vim atqui congue utroque ad, eam te diam adipisci, ne oporteat apeirian deseruisse quo. Utamur iuvaret repudiandae has et."
+      }, {
+        "driverName": "Dummy Lever Name",
+        "driverCode": "Y_1",
+        "filter1": 3,
+        "filter2": 2.8,
+        "min": 1,
+        "max": 5,
+        "filter3": 4,
+        "filter4": 5,
+        "rightText": "Lorem ipsum dolor sit amet, vim atqui congue utroque ad, eam te diam adipisci, ne oporteat apeirian deseruisse quo. Utamur iuvaret repudiandae has et."
+      }, {
+        "driverName": "Dummy Lever Name",
+        "driverCode": "B_1",
+        "filter1": 3,
+        "filter2": 2.8,
+        "min": 1,
+        "max": 5,
+        "filter3": 4,
+        "filter4": 5,
+        "rightText": "Lorem ipsum dolor sit amet, vim atqui congue utroque ad, eam te diam adipisci, ne oporteat apeirian deseruisse quo. Utamur iuvaret repudiandae has et."
+      }];
+      var driverData = [{
+        "driverName": "Dummy Driver TM",
+        "driverCode": "TM",
+        "filter1": 2.9,
+        "filter2": 3,
+        "min": 2.3,
+        "max": 4.3,
+        "filter3": 3.7,
+        "filter4": 4.3,
+        "filter2Diff": -0.1,
+        "filter3Diff": -0.8,
+        "filter4Diff": -1.4
+      }, {
+        "driverName": "Dummy Driver MA",
+        "driverCode": "MA",
+        "filter1": 3.1,
+        "filter2": 2.9,
+        "min": 2.3,
+        "max": 4.7,
+        "filter3": 3.7,
+        "filter4": 4.7,
+        "filter2Diff": 0.2,
+        "filter3Diff": -0.6,
+        "filter4Diff": -1.6
+      }, {
+        "driverName": "Dummy Driver X",
+        "driverCode": "X",
+        "filter1": 2.9,
+        "filter2": 3,
+        "min": 2.3,
+        "max": 4.3,
+        "filter3": 3.7,
+        "filter4": 4.3,
+        "filter2Diff": -0.1,
+        "filter3Diff": -0.8,
+        "filter4Diff": -1.4
+      }, {
+        "driverName": "Dummy Driver Y",
+        "driverCode": "Y",
+        "filter1": 3.1,
+        "filter2": 2.9,
+        "min": 2.3,
+        "max": 4.7,
+        "filter3": 3.7,
+        "filter4": 4.7,
+        "filter2Diff": 0.2,
+        "filter3Diff": -0.6,
+        "filter4Diff": -1.6
+      }, {
+        "driverName": "Dummy Driver Z",
+        "driverCode": "Z",
+        "filter1": 2.9,
+        "filter2": 3,
+        "min": 2.3,
+        "max": 4.3,
+        "filter3": 3.7,
+        "filter4": 4.3,
+        "filter2Diff": -0.1,
+        "filter3Diff": -0.8,
+        "filter4Diff": -1.4
+      }, {
+        "driverName": "Dummy Driver A",
+        "driverCode": "A",
+        "filter1": 3.1,
+        "filter2": 2.9,
+        "min": 2.3,
+        "max": 4.7,
+        "filter3": 3.7,
+        "filter4": 4.7,
+        "filter2Diff": 0.2,
+        "filter3Diff": -0.6,
+        "filter4Diff": -1.6
+      }, {
+        "driverName": "Dummy Driver B",
+        "driverCode": "B",
+        "filter1": 2.9,
+        "filter2": 3,
+        "min": 2.3,
+        "max": 4.3,
+        "filter3": 3.7,
+        "filter4": 4.3,
+        "filter2Diff": -0.1,
+        "filter3Diff": -0.8,
+        "filter4Diff": -1.4
+      }, {
+        "driverName": "Dummy Driver C",
+        "driverCode": "C",
+        "filter1": 3.1,
+        "filter2": 2.9,
+        "min": 2.3,
+        "max": 4.7,
+        "filter3": 3.7,
+        "filter4": 4.7,
+        "filter2Diff": 0.2,
+        "filter3Diff": -0.6,
+        "filter4Diff": -1.6
+      }];
+      $('#chartDemo').lineRangeChart(descData, driverData);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,410 @@
+.line-range-container .text-center {
+  text-align: center;
+}
+.line-range-container .text-right {
+  text-align: right;
+}
+.line-range-container .font-black {
+  color: #000000;
+}
+.line-range-container .clearfix:after, .line-range-container .clearfix:before {
+  content: '';
+  clear: both;
+  display: table;
+}
+.line-range-container input[type=checkbox] {
+  display: none;
+}
+.line-range-container input[type=checkbox] + label:before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  vertical-align: middle;
+  margin-right: 15px;
+  border-radius: 4px;
+  background-color: white;
+}
+.line-range-container input[type=checkbox]:checked + label:before {
+  content: "";
+  background: url("../images/tick.svg") no-repeat center;
+  background-size: 75%;
+}
+.line-range-container input[type=radio] {
+  display: none;
+}
+.line-range-container input[type=radio] + label:before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  vertical-align: middle;
+  margin-right: 10px;
+  border-radius: 4px;
+  border: 2px solid #4D4D4D;
+  background-color: white;
+}
+.line-range-container input[type=radio]:checked + label:before {
+  content: "";
+  background: url("../images/radio_rec_inside.svg") no-repeat center;
+}
+.line-range-container .pull-left {
+  float: left;
+}
+.line-range-container .pull-right {
+  float: right;
+}
+.line-range-container .blue-checkbox input[type=checkbox] + label:before {
+  border: 2px solid #0071BC;
+}
+.line-range-container .green-checkbox input[type=checkbox] + label:before {
+  border: 2px solid #8CC63F;
+}
+.line-range-container .green-checkbox input[type=checkbox]:checked + label:before {
+  background-color: #8CC63F;
+}
+.line-range-container .yellow-checkbox input[type=checkbox] + label:before {
+  border: 2px solid #FBAE17;
+}
+.line-range-container .red-checkbox input[type=checkbox] + label:before {
+  border: 2px solid #C84707;
+}
+.line-range-container .black-checkbox input[type=checkbox] + label:before {
+  border: 2px solid #4D4D4D;
+}
+.line-range-container .font-blue {
+  color: RGBA(0, 113, 188, 1);
+}
+.line-range-container .font-green {
+  color: RGBA(140, 198, 63, 1);
+}
+.line-range-container .font-yellow {
+  color: RGBA(251, 174, 23, 1);
+}
+.line-range-container .font-red {
+  color: RGBA(200, 71, 7, 1);
+}
+.line-range-container .font-grey {
+  color: RGBA(153, 153, 153, 1);
+}
+.line-range-container .checkbox-container, .line-range-container .checkbox-form {
+  overflow: auto;
+}
+.line-range-container .checkbox-container ul, .line-range-container .checkbox-form ul {
+  list-style: none;
+  float: right;
+  padding-bottom: 15px;
+  font-size: 12px;
+}
+.line-range-container .checkbox-container ul li, .line-range-container .checkbox-form ul li {
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: top;
+}
+.line-range-container .checkbox-form {
+  overflow: auto;
+}
+.line-range-container .checkbox-form ul {
+  list-style: none;
+  float: right;
+  padding-bottom: 15px;
+  font-size: 12px;
+}
+.line-range-container .checkbox-form ul li {
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: top;
+}
+.line-range-container .driver-analysis-heading {
+  font-weight: bold;
+  overflow: auto;
+}
+.line-range-container .driver-analysis-heading .driver-heading {
+  width: 40%;
+  padding: 10px;
+  font-size: 16px;
+}
+.line-range-container .driver-analysis-heading .survey-heading {
+  width: 25%;
+  text-align: center;
+  padding: 10px;
+  font-size: 16px;
+}
+.line-range-container .space-fill-40 {
+  width: 40%;
+  padding: 2px 10px;
+}
+.line-range-container .chart-triangle {
+  width: 25%;
+}
+.line-range-container .chart-triangle .triangle-box {
+  width: 25%;
+}
+.line-range-container .chart-triangle .triangle-box .triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 7.8px 4.5px 0 4.5px;
+  border-color: #e6e6e6 transparent transparent transparent;
+}
+.line-range-container .chart-triangle .triangle-box .triangle-left {
+  margin-left: -4px;
+}
+.line-range-container .chart-triangle .triangle-box .triangle-right {
+  margin-right: -4px;
+}
+.line-range-container .chart-heading {
+  position: relative;
+  width: 25%;
+  color: #808080;
+  font-size: 10px;
+}
+.line-range-container .chart-heading .chart-heading-advanced {
+  position: absolute;
+  right: 0;
+}
+.line-range-container .driver-row {
+  clear: both;
+  margin-bottom: 5px;
+  background-color: #F2F2F2;
+}
+.line-range-container .driver-row .driver-wrapper {
+  height: 40px;
+  cursor: pointer;
+}
+.line-range-container .driver-row .driver-name {
+  width: 40%;
+  font-size: 16px;
+  padding: 10px;
+}
+.line-range-container .driver-row .filter2-chart {
+  width: 25%;
+  height: 100%;
+  position: relative;
+}
+.line-range-container .driver-row .filter2-chart .scales {
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+  height: 100%;
+}
+.line-range-container .driver-row .filter2-chart .scales .scale {
+  width: 25%;
+  height: 100%;
+}
+.line-range-container .driver-row .filter2-chart .scales .scale .scale-border {
+  position: relative;
+  border-left: 1px solid rgba(0, 0, 0, 0.06);
+  height: 100%;
+}
+.line-range-container .driver-row .filter2-chart .scale:last-of-type .scale-border:last-of-type {
+  border-right: 1px solid rgba(0, 0, 0, 0.06);
+}
+.line-range-container .driver-row .filter2-chart .filter2-bar {
+  width: 50%;
+  position: absolute;
+  height: 100%;
+  background-color: #BEDB9A;
+  border-radius: 5px;
+}
+.line-range-container .driver-row .filter2-chart .marker {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  left: 5px;
+  border: 2px solid grey;
+  margin: 11px 0;
+  border-radius: 50%;
+  z-index: 2;
+}
+.line-range-container .driver-row .filter2-chart .filter1-marker {
+  border-color: #0071BC;
+  left: 10px;
+}
+.line-range-container .driver-row .filter2-chart .filter2-marker {
+  border-color: #C84808;
+  left: 20px;
+}
+.line-range-container .driver-row .filter2-chart .filter3-marker {
+  border-color: #FBAE17;
+  left: 30px;
+}
+.line-range-container .driver-row .filter2-chart .filter4-marker {
+  border-color: #4D4D4D;
+  left: 40px;
+}
+.line-range-container .driver-row .arrow-bottom {
+  background: url("../images/black-arrow.svg") no-repeat;
+}
+.line-range-container .driver-row .invert {
+  -moz-transform: scaleY(-1);
+  -o-transform: scaleY(-1);
+  -webkit-transform: scaleY(-1);
+  transform: scaleY(-1);
+  filter: FlipV;
+  -ms-filter: "FlipV";
+}
+.line-range-container .driver-row .driver-right-text {
+  width: 29%;
+  height: 100%;
+  color: #B3B3B3;
+  display: none;
+  font-weight: 600;
+}
+.line-range-container .driver-row .driver-right-text .best-practices {
+  padding: 12px;
+  font-size: 12px;
+}
+.line-range-container .driver-row .arrow {
+  width: 2%;
+  height: 15px;
+  margin-top: 12px;
+  padding-right: 10px;
+  -webkit-transition: 0.6s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transition: 0.6s;
+  -moz-transform-style: preserve-3d;
+  -o-transition: 0.6s;
+  -o-transform-style: preserve-3d;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+}
+.line-range-container .driver-row .driver-desc {
+  display: none;
+}
+.line-range-container .driver-row .description-wrapper {
+  background-color: #FAFAFA;
+  height: 80px;
+}
+.line-range-container .driver-row .description-wrapper .line-container {
+  position: relative;
+  left: 6px;
+  top: 3px;
+}
+.line-range-container .driver-row .description-wrapper .line-container .line {
+  width: 0;
+  height: 0.1px;
+  -moz-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  z-index: 10;
+  position: absolute;
+  -moz-animation-delay: 0.2s;
+  -webkit-animation-delay: 0.2s;
+  -moz-animation-duration: 0.2s;
+  -moz-animation-timing-function: linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-name: line;
+  -webkit-animation-duration: 0.2s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-name: line;
+}
+.line-range-container .driver-row .description-wrapper .driver-name .driver-text {
+  font-size: 12px;
+  padding: 15px 30px;
+}
+.line-range-container .driver-row .description-wrapper .desc-right-container {
+  width: 32%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.line-range-container .driver-row .description-wrapper .desc-right-container .desc-text {
+  padding: 10px 20px;
+  font-size: 12px;
+}
+.line-range-container .driver-row .description-wrapper .filter2-chart .filter2-bar {
+  margin: auto;
+  top: 0;
+  height: 40%;
+  bottom: 0;
+}
+.line-range-container .driver-row .description-wrapper .filter2-chart .marker {
+  margin: 35px 0;
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+  border: none;
+  -moz-animation-delay: 0.9s;
+  -webkit-animation-delay: 0.9s;
+  -moz-transform: scale(0);
+  -moz-animation: point 0.1s linear forwards;
+  -webkit-transform: scale(0);
+  -webkit-animation: point 0.1s linear forwards;
+}
+.line-range-container .driver-row .description-wrapper .filter2-chart .filter1-desc-marker {
+  background-color: #0071BC;
+  left: 20px;
+}
+.line-range-container .driver-row .description-wrapper .filter2-chart .filter1-desc-marker .line {
+  border-bottom: 2px dotted #0071BC;
+}
+.line-range-container .driver-row .description-wrapper .filter2-chart .filter2-desc-marker {
+  background-color: #C84808;
+  left: 50px;
+}
+.line-range-container .driver-row .description-wrapper .filter2-chart .filter2-desc-marker .line {
+  border-bottom: 2px dotted #C84808;
+}
+.line-range-container .driver-row .description-wrapper .filter2-chart .filter3-desc-marker {
+  background-color: #FBAE17;
+  left: 70px;
+}
+.line-range-container .driver-row .description-wrapper .filter2-chart .filter3-desc-marker .line {
+  border-bottom: 2px dotted #FBAE17;
+}
+.line-range-container .driver-row .description-wrapper .filter2-chart .filter4-desc-marker {
+  background-color: #4D4D4D;
+  left: 90px;
+}
+.line-range-container .driver-row .description-wrapper .filter2-chart .filter4-desc-marker .line {
+  border-bottom: 2px dotted #4D4D4D;
+}
+@-moz-keyframes point {
+  0% {
+    -moz-transform: scale(0, 0);
+  }
+  100% {
+    -moz-transform: scale(1, 1);
+  }
+}
+@-webkit-keyframes point {
+  0% {
+    -webkit-transform: scale(0, 0);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+  }
+}
+@keyframes point {
+  0% {
+    transform: scale(0, 0);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+@-moz-keyframes line {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@-webkit-keyframes line {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes line {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
