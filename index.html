@@ -14,18 +14,28 @@
   <link rel="stylesheet" href="lib/lineRangeChart.css">
   <style>
     body {
-      font-family: arial
+      font-family: arial;
+      margin: 0;
+      color: #4D4D4D;
+    }
+
+    #chartDemo {
+      padding: 40px 10vw;
+    }
+
+    #view-heading {
+      font-size: 1.5em;
+      margin: 0;
+      text-align: center;
+      padding: 10px;
+      background-color: #F2F2F2;
     }
   </style>
 </head>
 
 <body>
-
-  <div id="driver-chart-container">
-
-    <div id='chartDemo'></div>
-
-  </div>
+  <h1 id="view-heading">Driver analysis</h1>
+  <div id='chartDemo'></div>
 
   <script src="jQuery.min.js"></script>
   <script src="lib/jQuery.actual.min.js"></script>
@@ -91,17 +101,17 @@
         "max": 5,
         "filter3": 4,
         "filter4": 5,
-        "rightText": "Sea dicunt voluptatibus ut, pri id case primis molestiae, iisque reprehendunt ex vel. Impetus deterruisset vel ad, eam eu exerci recusabo principes, prima dicit cu cum. Vim justo nostrud quaestio ad, qui nobis ignota voluptaria ex. Mel eu nonumy vivendum voluptatum."
+        "rightText": "Sea dicunt voluptatibus ut, pri id case primis molestiae, iisque reprehendunt ex vel. Impetus deterruisset vel ad, eam eu exerci recusabo principes, prima dicit cu cum. "
       }, {
         "driverName": "Dummy Lever Name",
         "driverCode": "TM_1",
-        "filter1": 3,
+        "filter1": 2,
         "filter2": 2.8,
-        "min": 1,
-        "max": 5,
+        "min": 2,
+        "max": 4,
         "filter3": 4,
-        "filter4": 5,
-        "rightText": "Ex sed delicata sententiae, duo at inani ignota nostro. Cum et libris mnesarchum, an mundi insolens oportere sit, purto modus nostrud ex nec. Quo an vocent omnesque. Ea vis putant invidunt insolens, est prima numquam et."
+        "filter4": 4,
+        "rightText": "Ex sed delicata sententiae, duo at inani ignota nostro. Cum et libris mnesarchum, an mundi insolens oportere sit, purto modus nostrud ex nec. Quo an vocent omnesque."
       }, {
         "driverName": "Dummy Lever Name",
         "driverCode": "TM_2",
@@ -110,7 +120,7 @@
         "min": 1,
         "max": 5,
         "filter3": 4,
-        "filter4": 5,
+        "filter4": 4.3,
         "rightText": "Lorem ipsum dolor sit amet, vim atqui congue utroque ad, eam te diam adipisci, ne oporteat apeirian deseruisse quo. Utamur iuvaret repudiandae has et."
       }, {
         "driverName": "Dummy Lever Name",
@@ -226,12 +236,12 @@
       var driverData = [{
         "driverName": "Dummy Driver TM",
         "driverCode": "TM",
-        "filter1": 2.9,
+        "filter1": 1.9,
         "filter2": 3,
-        "min": 2.3,
-        "max": 4.3,
+        "min": 1,
+        "max": 5,
         "filter3": 3.7,
-        "filter4": 4.3,
+        "filter4": 4.0,
         "filter2Diff": -0.1,
         "filter3Diff": -0.8,
         "filter4Diff": -1.4
